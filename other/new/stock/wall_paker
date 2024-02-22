@@ -1,0 +1,129 @@
+# timer = 1
+#     Day = "Monday"
+#     print("Day: "+Day)
+#     print("..../......././..........//.......")
+#     input("Satrt sim")
+
+
+#     while (timer <=5 ):
+#         total = []
+#     print("hello")
+#     names = ["Robert","Barry","nickker"]
+#     for x in compani:
+#          a = ((compani[x])[0])
+#          b= ((compani[x])[1])
+#          tot = a *b
+#          total.append(tot)
+#          buyer = random.choice(names)
+#          num = random.randint(1,1000)
+#          order = num * b
+#          while True:
+#              if(num <= tot ):
+#                 #  print(order)
+#                  print(buyer + " bought " + str(num) + " of " + x)
+#                  a =  a - num
+#                  break
+#              else:
+#                  num - random.randint(1,100)
+#                  order = num * b
+#                  a = a - num
+#                 #  print(order)
+#                  print(buyer + " bought " + num + " of " + i)
+
+#                     print("")
+#     totals = []
+#     print("hello")
+#     names_s = ["Robert","Barry","nickker"]
+#     for x in compani:
+#          a = ((compani[x])[0])
+#          b= ((compani[x])[1])
+#          tot = a *b
+#          totals.append(tot)
+#          seller = random.choice(names_s)
+#          num = random.randint(1,1000)
+#          order = num * b
+#         #  print(order)
+#         #  print(a)
+#          a = order + num
+
+#          print(seller + " sold " + str(num) + " of " + x)
+#         # buy(companies)
+#         # sell(companies)
+#         print(timer)
+#         input()
+#         timer = timer + 1
+
+
+import random
+
+
+compani = {
+
+   "Appl":  [1000,2],
+   "Amazone": [1000,3],
+   "Songo": [2000,35]
+    # "Amazone" : 50
+
+}
+
+
+timer = 1
+# Day = "Monday"
+# print("Day: " + Day)
+print("..../......././..........//.......")
+input("Start sim")
+
+while timer <= 5:
+
+    print("Day" + str(timer))
+    total = []
+    print("buyers")
+    print("hello")
+    names = ["Robert", "Barry", "nickker"]
+    for x in compani:
+        a = ((compani[x])[0])
+        b = ((compani[x])[1])
+        tot = a * b
+        total.append(tot)
+        buyer = random.choice(names)
+        num = random.randint(1, 1000)
+        order = num * b
+        while True:
+            if num <= tot:
+                #  print(order)
+                print(buyer + " bought " + str(num) + " of " + x)
+                (compani[x])[0] = (compani[x])[0] - num
+                break
+            else:
+                num = random.randint(1, 100)
+                order = num * b
+                (compani[x])[0] = (compani[x])[0] - num
+                #  print(order)
+                print(buyer + " bought " + str(num) + " of " + x)
+        print("")
+
+    totals = []
+    print("sellers")
+    names_s = ["Robert", "Barry", "nickker"]
+    for x in compani:
+        a = ((compani[x])[0])
+        b = ((compani[x])[1])
+        tot = a * b
+        totals.append(tot)
+        seller = random.choice(names_s)
+        num = random.randint(1, 1000)
+        order = num * b
+        #  print(order)
+        #  print(a)
+        (compani[x])[0] = (compani[x])[0] + num
+
+        print(seller + " sold " + str(num) + " of " + x)
+        # buy(companies)
+        # sell(companies)
+    timer = timer + 1
+    print("..../......././..........//.......")
+    print(compani)
+    print("..../......././..........//.......")
+    input()
+
+print(compani)
